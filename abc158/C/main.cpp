@@ -39,7 +39,16 @@ ull lcm(ull a, ull b) { return a / gcd(a, b) * b; }
 
 
 void func(long long A, long long B){
-
+    for (ll x = 1; x < 10001; x++)
+    {
+        int a = x * 0.08;
+        int b = x * 0.1;
+        if(a == A && b == B) {
+            cout << x << endl;
+            return;
+        }
+    }
+    cout << -1 << endl;
 }
 
 int main(){

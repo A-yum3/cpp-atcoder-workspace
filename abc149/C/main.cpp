@@ -41,9 +41,18 @@ ull lcm(ull a, ull b) {
     return a / gcd(a, b) * b;
 }
 
+bool is_prime(ll x) {
+    if(x <= 1) return false;
+    for (ll i = 2; i * i <= x; i++)
+    {
+        if(x % i == 0) return false;
+    }
+    return true;
+}
+
 void func(long long X) {
-    auto vp = makePrimes(1e7);
-    int ans = *lower_bound(all(vp), X);
+    ll ans = X;
+    while(!is_prime(ans)) ans++;
     cout << ans << endl;
 }
 

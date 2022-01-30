@@ -39,9 +39,7 @@ ull lcm(ull a, ull b) { return a / gcd(a, b) * b; }
 
 
 void func(long long N, long long A, long long B){
-    ll c = floor(N / (A + B));
-    ll m = N % (A + B);
-    cout << A * c + min(m, A) << endl;
+
 }
 
 int main(){
